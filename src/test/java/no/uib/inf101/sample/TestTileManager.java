@@ -1,7 +1,8 @@
-package MapTiles;
+package no.uib.inf101.sample;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import MapTiles.TileManager;
 import main.GamePanel;
 import org.junit.Test;
 

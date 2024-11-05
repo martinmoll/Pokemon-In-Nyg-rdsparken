@@ -10,21 +10,33 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Objects;
 
+/**
+ * Logikken for klassen er tatt fra: https://youtu.be/ugzxCcpoSdE?si=xIhrEB_B6qHQ9BPN
+ * Egne tiles er funnet på internet.
+ */
 public class TileManager {
-    GamePanel gamePanel;
-    Tile[] tile;
-    int mapTileNum[][];
+    public GamePanel gamePanel;
+    public Tile[] tile;
+    public int[][] mapTileNum;
 
-    // Konstruktøren vår
+    /**
+     * Tar inn GamePanelet vårt og tegner
+     * @param gamePanel
+     */
     public TileManager(GamePanel gamePanel) {
         this.gamePanel = gamePanel;
-        tile = new Tile[10]; // Dette betyr vi lager 10 typer tiles
+        tile = new Tile[10]; // Dette betyr vi har plass til 10 typer tiles
         // mapTileNum arrayet lagrer alle nummerene vi har i vårt map
         mapTileNum = new int[gamePanel.maxWorldCols][gamePanel.maxWorldRows];
         getTileImage();
         loadMap("Maps/map1.txt");
     }
 
+    /**
+     * Henter .png bildet og leser dette.
+     * De blir koblet til et nummer som representerer den typen tile.
+     * Her er selve .read(........) kallet endret for å ikke få nullPointer errors
+     */
     public void getTileImage() {
         try {
             // Gress tile
@@ -43,14 +55,18 @@ public class TileManager {
             // Stein tile
             tile[4] = new Tile();
             tile[4].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/stone_tile.png")));
+            tile[4].collision = true;
+            // Stein RFB tile
+            tile[5] = new Tile();
+            tile[5].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/RFB_stonetile.png")));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Metode som tegner rutene
-     *
+     * Metode som tegner tilesene våre
      * @param graphics2D
      */
     public void drawTile(Graphics2D graphics2D) {

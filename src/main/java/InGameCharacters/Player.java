@@ -9,6 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * Klassen og læringen av buffered reader er modifisert fra: https://youtu.be/wT9uNGzMEM4?si=P5n27Q3gv_kiNZRP
+ */
 public class Player extends Characters{
     GamePanel gamePanel;
     CharacterController characterController;
@@ -37,7 +40,7 @@ public class Player extends Characters{
     }
 
     /**
-     *
+     * Metode som oppdaterer
      */
     public void update(){
         // Ved å ha dette ytterste if setningen, passer vi på at karakteren kun bytter bilde når vi faktisk beveger oss
@@ -78,9 +81,12 @@ public class Player extends Characters{
         }
 
     }
+
+    /**
+     * Tegner spilleren med riktig bilde i henhold til retning spilleren beveger seg
+     * @param graphics2D
+     */
     public void drawPlayer(Graphics2D graphics2D){
-//        graphics2D.setColor(Color.white);
-//        graphics2D.fillRect(characterX,characterY, gamePanel.tileSize,gamePanel.tileSize);
 
         // Sjekker retningen vi går i
         BufferedImage image = null;
@@ -142,7 +148,7 @@ public class Player extends Characters{
         }catch (IOException e){
             e.printStackTrace();
         }
-        // Sjekke om den klarer loade
+        // Linje for å sjekke om den klarer å laste inn bildene
         System.out.println("Image loading started");
         System.out.println("Image loading ended.");
     }
