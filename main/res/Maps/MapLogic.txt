@@ -1,0 +1,4 @@
+Alle mappene jeg lager er i 12x16 tiles format.
+Der jeg lager et map som et String array med tall som representerer hva slags tile som tegnes.
+Vi kjører en løkke over mappet som tegner det i rektangelet vårt.
+
