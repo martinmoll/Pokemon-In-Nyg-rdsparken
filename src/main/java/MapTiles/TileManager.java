@@ -29,7 +29,7 @@ public class TileManager {
         // mapTileNum arrayet lagrer alle nummerene vi har i vårt map
         mapTileNum = new int[gamePanel.maxWorldCols][gamePanel.maxWorldRows];
         getTileImage();
-        loadMap("Maps/map1.txt");
+        loadMap("res/Maps/map1.txt");
     }
 
     /**
