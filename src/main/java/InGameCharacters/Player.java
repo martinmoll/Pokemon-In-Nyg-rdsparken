@@ -126,25 +126,22 @@ public class Player extends Characters{
         };
         graphics2D.drawImage(image, screenX, screenY,gamePanel.tileSize,gamePanel.tileSize,null);
     }
+    
+    /**
+     * Henter ut alle 8 bilder som trengs for animasjonen av spilleren.
+     * Bilder er lagret i res/Player folderen.
+     * Gjør en sjekk med try/catch for feil ved innlasing av bilder.
+     */
     public void getPlayerImage(){
-        // her laster vi inn bildene for Player characteren vår
-        // Alle bildene er tatt fra denne linken: https://www.deviantart.com/streakofsprites/art/Ash-Ketchum-Sprite-Set-435950341
-        // All ære går til de som lagde bildene:
-//        Intro Walking Sprite Base: Otamago, lordindy
-//        In-Battle Sprite Base: akuma-tsubasa
-//        Mugshot Base: sketchfox7, akuma-tsubasa
-//        Backsprite base: alzatia
-//        OW's Base: Metapod23
-//        OW's (Hatless) Reference: lordindy
         try {
-            up1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_up_1.png")));
-            up2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_up_2.png")));
-            down1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_down_1.png")));
-            down2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_down_2.png")));
-            left1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_left_1.png")));
-            left2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_left_2.png")));
-            right1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_right_1.png")));
-            right2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("Player/player_right_2.png")));
+            up1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_up_1.png")));
+            up2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_up_2.png")));
+            down1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_down_1.png")));
+            down2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_down_2.png")));
+            left1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_left_1.png")));
+            left2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_left_2.png")));
+            right1 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_right_1.png")));
+            right2 = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/Player/player_right_2.png")));
         }catch (IOException e){
             e.printStackTrace();
         }

@@ -11,7 +11,8 @@ public class Badekamerat extends SuperNPC {
     public Badekamerat(){
         name = "Badekamerat";
         try {
-            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/NPCs/Badekamerat_svømmende_transbakgrunn.png")));
+            image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/NPC/Badekamerat_svømmende_transbakgrunn.png")));
+
         } catch (IOException e){
             e.printStackTrace();
         }

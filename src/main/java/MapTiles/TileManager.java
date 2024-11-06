@@ -41,24 +41,24 @@ public class TileManager {
         try {
             // Gress tile
             tile[0] = new Tile();
-            tile[0].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/pokemon_grass.png")));
+            tile[0].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/MapTilesImage/pokemon_grass.png")));
             // Høyt gress tile
             tile[1] = new Tile();
-            tile[1].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/pokemon_tall_grass.png")));
+            tile[1].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/MapTilesImage/pokemon_tall_grass.png")));
 
             // Jord tile https://www.deviantart.com/supercommanderwolfy/art/Grass-Dirt-Tiles-001-265189221
             tile[2] = new Tile();
-            tile[2].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/pokemon_dirt.png")));
+            tile[2].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/MapTilesImage/pokemon_dirt.png")));
             // Vann tile
             tile[3] = new Tile();
-            tile[3].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/water_tile.png")));
+            tile[3].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/MapTilesImage/water_tile.png")));
             // Stein tile
             tile[4] = new Tile();
-            tile[4].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/stone_tile.png")));
+            tile[4].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/MapTilesImage/stone_tile.png")));
             tile[4].collision = true;
             // Stein RFB tile
             tile[5] = new Tile();
-            tile[5].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("MapTiles/RFB_stonetile.png")));
+            tile[5].image = ImageIO.read(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("res/MapTilesImage/RFB_stonetile.png")));
 
         } catch (IOException e) {
             e.printStackTrace();

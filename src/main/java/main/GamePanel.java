@@ -1,7 +1,7 @@
 package main;
 
-import MapTiles.TileManager;
 import InGameCharacters.Player;
+import MapTiles.TileManager;
 import NPCs.SuperNPC;
 
 import javax.swing.*;
