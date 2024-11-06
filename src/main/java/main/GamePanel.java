@@ -7,8 +7,9 @@ import NPCs.SuperNPC;
 import javax.swing.*;
 import java.awt.*;
 
-// Hele klassen, utenom StartBattle og CheckInteraction er tatt fra: https://youtu.be/VpH33Uw-_0E?si=YjZBq5C3ReoLJaSQ
-// Lager denne som en sub-class av JPanel. Jeg får dermed alle funksjonene til JPanel.
+/*
+ * Denne klassen brukes for å håndtere alle generelle instillinger og essensielle bakgrunnsprosesser i spillet
+ */
 public class GamePanel extends JPanel implements Runnable{
     // SKJERM INNSTILLINGER
     final int originalTileSize = 16; // Karakter størrelse i pixler. 16x16

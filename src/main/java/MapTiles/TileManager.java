@@ -10,10 +10,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Objects;
 
-/**
- * Logikken for klassen er tatt fra: https://youtu.be/ugzxCcpoSdE?si=xIhrEB_B6qHQ9BPN
- * Egne tiles er funnet på internet.
+/*
+ * Denne klassen brukes til operasjoner som tegner tiles i spillet.
  */
+ 
 public class TileManager {
     public GamePanel gamePanel;
     public Tile[] tile;
