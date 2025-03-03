@@ -39,9 +39,7 @@ public class Player extends Characters{
         direction = "down";
     }
 
-    /**
-     * Metode som oppdaterer
-     */
+    
     public void update(){
         // Ved å ha dette ytterste if setningen, passer vi på at karakteren kun bytter bilde når vi faktisk beveger oss
         // Uten denne linjen bevegde karakteren seg når den stod stille siden koden for animasjonen blir kalt på,
