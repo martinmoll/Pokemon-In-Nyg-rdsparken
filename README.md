@@ -5,7 +5,8 @@ A from-scracth project completed as a part of my Object-Oriented-Programming cla
 
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
+
 
 ## Roadmap for Future Improvements
 - [ ] Expanding the map in size.
